@@ -1,0 +1,14 @@
+= Neoflix Cypher
+
+This repository contains the Cypher queries used within the link:https://graphacademy.neo4j.com/categories/developer/[App Developer^] courses on link:https://graphacademy.neo4j.com/categories/developer/[Neo4j GraphAcademy^].
+
+To make sense of these queries, enrol to the course for the language of your choice:
+
+* link:https://graphacademy.neo4j.com/courses/app-dotnet[.NET]
+* link:https://graphacademy.neo4j.com/courses/app-go[Go]
+* link:https://graphacademy.neo4j.com/courses/app-graphql[GraphQL]
+* link:https://graphacademy.neo4j.com/courses/app-java[Java]
+* link:https://graphacademy.neo4j.com/courses/app-nodejs[Node.js]
+* link:https://graphacademy.neo4j.com/courses/app-python[Python]
+* link:https://graphacademy.neo4j.com/courses/app-spring-data[Spring Data Neo4j]
+* link:https://graphacademy.neo4j.com/courses/app-typescript[TypeScript]
