@@ -11,7 +11,7 @@ CALL {
 
 RETURN g {
   .*,
-  movies: size((g)<-[:IN_GENRE]-(m:Movie)),
+  movies: size((g)<-[:IN_GENRE]-(:Movie)),
   poster: poster
 }
 ORDER BY g.name ASC
