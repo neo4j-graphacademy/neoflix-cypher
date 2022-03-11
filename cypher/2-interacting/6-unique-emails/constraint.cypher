@@ -1,3 +1,3 @@
-CREATE CONSTRAINT UserEmailUnique
+CREATE OR REPLACE CONSTRAINT UserEmailUnique
 ON (u:User)
 ASSERT u.email IS UNIQUE;
