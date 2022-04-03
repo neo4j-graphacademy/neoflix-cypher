@@ -1,5 +1,5 @@
 MATCH (p:Person)
-WHERE p.name CONTAINS $q
+WHERE $q IS NULL OR p.name CONTAINS $q
 RETURN p { .* } AS person
 ORDER BY p.name ASC
 SKIP $skip
