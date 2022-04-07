@@ -6,7 +6,6 @@ ORDER BY m.imdbRating DESC
 WITH g, head(collect(m)) AS movie
 
 RETURN g {
-    link: '/genres/'+ g.name,
     .name,
     movies: size((g)<-[:IN_GENRE]-()),
     poster: movie.poster
