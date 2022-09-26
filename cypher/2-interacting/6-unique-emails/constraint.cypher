@@ -1,4 +1,4 @@
 CREATE CONSTRAINT UserEmailUnique
 IF NOT EXISTS
-ON (u:User)
-ASSERT u.email IS UNIQUE;
+FOR (user:User)
+REQUIRE user.email IS UNIQUE;
