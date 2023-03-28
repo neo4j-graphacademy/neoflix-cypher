@@ -1,2 +1,2 @@
 MATCH (g:Genre)
-RETURN g.name ORDER BY size((g)<-[:IN_GENRE]-()) DESC LIMIT 1
+RETURN g.name ORDER BY count{ (g)<-[:IN_GENRE]-() } DESC LIMIT 1

@@ -1,2 +1,2 @@
 MATCH (g:Genre {name: "Action"})
-RETURN size((g)<-[:IN_GENRE]-())
+RETURN count { (g)<-[:IN_GENRE]-() }

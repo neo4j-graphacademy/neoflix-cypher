@@ -1,9 +1,10 @@
 MATCH (:Person {tmdbId: $id})-[:ACTED_IN|DIRECTED]->(m)<-[r:ACTED_IN|DIRECTED]-(p)
+WITH p, collect(m {.tmdbId, .title, type: type(r)}) AS inCommon
 RETURN p {
   .*,
-  actedCount: size((p)-[:ACTED_IN]->()),
-  directedCount: size((p)-[:DIRECTED]->()),
-  inCommon: collect(m {.tmdbId, .title, type: type(r)})
+  actedCount: count { (p)-[:ACTED_IN]->() },
+  directedCount: count {(p)-[:DIRECTED]->() },
+  inCommon: inCommon
 } AS person
 ORDER BY size(person.inCommon) DESC
 SKIP 0
