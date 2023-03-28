@@ -7,6 +7,6 @@ WITH g, head(collect(m)) AS movie
 
 RETURN g {
     .name,
-    movies: size((g)<-[:IN_GENRE]-()),
+    movies: count { (g)<-[:IN_GENRE]-() },
     poster: movie.poster
 } AS genre
